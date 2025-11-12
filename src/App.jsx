@@ -152,7 +152,7 @@ export default function RudieriPortfolio() {
       </main>
 
       <footer className="text-center text-sm text-gray-500 py-8">
-        Built with ❤️ — Portfolio Developed for hiring and showcases. Hosted on GitHub Pages.
+        Built with ❤️ — Portfolio Developed for showcases. Hosted on GitHub Pages.
       </footer>
     </div>
   );
