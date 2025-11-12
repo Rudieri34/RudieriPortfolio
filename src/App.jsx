@@ -103,19 +103,27 @@ export default function RudieriPortfolio() {
                       : "0px 0px 20px #6366F1",
                   }}
                   className={`cursor-pointer ${darkMode ? "bg-gray-800" : "bg-white"
-                    } rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-indigo-500/30`}
-                >
-                  <img
-                    src={p.img}
-                    alt={`${p.title} thumbnail`}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold">{p.title}</h3>
-                    <div className="text-sm text-gray-500">{p.role}</div>
-                    <p className="mt-3 text-sm">{p.desc}</p>
+                    } rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-indigo-500/30 flex flex-col h-[350px]`}
+              >
+                  <div className="h-[180px] w-full overflow-hidden flex-shrink-0">
+                    <img
+                      src={p.img}
+                      alt={`${p.title} thumbnail`}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+
+                  <div className="p-5 flex flex-col justify-between flex-grow">
+                    <div>
+                      <h3 className="text-lg font-semibold truncate">{p.title}</h3>
+                      <div className="text-sm text-gray-500">{p.role}</div>
+                    </div>
+                    <p className="mt-3 text-sm text-ellipsis overflow-hidden line-clamp-4 leading-relaxed">
+                      {p.desc}
+                    </p>
                   </div>
                 </motion.article>
+
               </a>
             ))}
           </div>
